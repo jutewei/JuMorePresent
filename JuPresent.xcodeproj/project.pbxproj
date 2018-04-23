@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB00C68C2089BE07006E5ED4 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB00C68B2089BE07006E5ED4 /* NextViewController.m */; };
 		EBAE4D3A2079FFC6002C855C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAE4D392079FFC6002C855C /* AppDelegate.m */; };
 		EBAE4D3D2079FFC6002C855C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAE4D3C2079FFC6002C855C /* ViewController.m */; };
 		EBAE4D402079FFC6002C855C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAE4D3E2079FFC6002C855C /* Main.storyboard */; };
 		EBAE4D422079FFC7002C855C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBAE4D412079FFC7002C855C /* Assets.xcassets */; };
 		EBAE4D452079FFC7002C855C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBAE4D432079FFC7002C855C /* LaunchScreen.storyboard */; };
 		EBAE4D482079FFC7002C855C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAE4D472079FFC7002C855C /* main.m */; };
+		EBAE4D502079FFD0002C855C /* JuPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAE4D4F2079FFD0002C855C /* JuPresentationController.m */; };
+		EBAE4D532079FFD5002C855C /* JuModelTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAE4D512079FFD5002C855C /* JuModelTransitioning.m */; };
+		EBBBEA702089E665003C3E9B /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBEA6F2089E665003C3E9B /* SimpleViewController.m */; };
+		EBBBEA732089E670003C3E9B /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBBEA722089E670003C3E9B /* PresentationViewController.m */; };
+		EBBCF1D72089C4A9002986F1 /* JuInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBCF1D62089C4A8002986F1 /* JuInteractiveTransition.m */; };
+		EBBCF1EA2089D124002986F1 /* JuNaviTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBCF1E92089D124002986F1 /* JuNaviTransitioning.m */; };
+		EBBCF1ED2089D27B002986F1 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBCF1EC2089D27B002986F1 /* PushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB00C68A2089BE07006E5ED4 /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		EB00C68B2089BE07006E5ED4 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		EBAE4D352079FFC6002C855C /* JuPresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuPresent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAE4D382079FFC6002C855C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EBAE4D392079FFC6002C855C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +36,20 @@
 		EBAE4D442079FFC7002C855C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBAE4D462079FFC7002C855C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBAE4D472079FFC7002C855C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBAE4D4E2079FFD0002C855C /* JuPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JuPresentationController.h; sourceTree = "<group>"; };
+		EBAE4D4F2079FFD0002C855C /* JuPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JuPresentationController.m; sourceTree = "<group>"; };
+		EBAE4D512079FFD5002C855C /* JuModelTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JuModelTransitioning.m; sourceTree = "<group>"; };
+		EBAE4D522079FFD5002C855C /* JuModelTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JuModelTransitioning.h; sourceTree = "<group>"; };
+		EBBBEA6E2089E665003C3E9B /* SimpleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		EBBBEA6F2089E665003C3E9B /* SimpleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		EBBBEA712089E670003C3E9B /* PresentationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
+		EBBBEA722089E670003C3E9B /* PresentationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
+		EBBCF1D52089C4A8002986F1 /* JuInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JuInteractiveTransition.h; sourceTree = "<group>"; };
+		EBBCF1D62089C4A8002986F1 /* JuInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JuInteractiveTransition.m; sourceTree = "<group>"; };
+		EBBCF1E82089D124002986F1 /* JuNaviTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JuNaviTransitioning.h; sourceTree = "<group>"; };
+		EBBCF1E92089D124002986F1 /* JuNaviTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JuNaviTransitioning.m; sourceTree = "<group>"; };
+		EBBCF1EB2089D27B002986F1 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		EBBCF1EC2089D27B002986F1 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +86,22 @@
 				EBAE4D392079FFC6002C855C /* AppDelegate.m */,
 				EBAE4D3B2079FFC6002C855C /* ViewController.h */,
 				EBAE4D3C2079FFC6002C855C /* ViewController.m */,
+				EB00C68A2089BE07006E5ED4 /* NextViewController.h */,
+				EB00C68B2089BE07006E5ED4 /* NextViewController.m */,
+				EBBCF1EB2089D27B002986F1 /* PushViewController.h */,
+				EBBCF1EC2089D27B002986F1 /* PushViewController.m */,
+				EBBBEA6E2089E665003C3E9B /* SimpleViewController.h */,
+				EBBBEA6F2089E665003C3E9B /* SimpleViewController.m */,
+				EBBBEA712089E670003C3E9B /* PresentationViewController.h */,
+				EBBBEA722089E670003C3E9B /* PresentationViewController.m */,
+				EBAE4D4E2079FFD0002C855C /* JuPresentationController.h */,
+				EBAE4D4F2079FFD0002C855C /* JuPresentationController.m */,
+				EBAE4D522079FFD5002C855C /* JuModelTransitioning.h */,
+				EBAE4D512079FFD5002C855C /* JuModelTransitioning.m */,
+				EBBCF1E82089D124002986F1 /* JuNaviTransitioning.h */,
+				EBBCF1E92089D124002986F1 /* JuNaviTransitioning.m */,
+				EBBCF1D52089C4A8002986F1 /* JuInteractiveTransition.h */,
+				EBBCF1D62089C4A8002986F1 /* JuInteractiveTransition.m */,
 				EBAE4D3E2079FFC6002C855C /* Main.storyboard */,
 				EBAE4D412079FFC7002C855C /* Assets.xcassets */,
 				EBAE4D432079FFC7002C855C /* LaunchScreen.storyboard */,
@@ -141,8 +181,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBBEA732089E670003C3E9B /* PresentationViewController.m in Sources */,
+				EBBBEA702089E665003C3E9B /* SimpleViewController.m in Sources */,
+				EBBCF1D72089C4A9002986F1 /* JuInteractiveTransition.m in Sources */,
+				EBAE4D532079FFD5002C855C /* JuModelTransitioning.m in Sources */,
+				EBBCF1ED2089D27B002986F1 /* PushViewController.m in Sources */,
+				EB00C68C2089BE07006E5ED4 /* NextViewController.m in Sources */,
+				EBAE4D502079FFD0002C855C /* JuPresentationController.m in Sources */,
 				EBAE4D3D2079FFC6002C855C /* ViewController.m in Sources */,
 				EBAE4D482079FFC7002C855C /* main.m in Sources */,
+				EBBCF1EA2089D124002986F1 /* JuNaviTransitioning.m in Sources */,
 				EBAE4D3A2079FFC6002C855C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JuPresent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JuPresent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
