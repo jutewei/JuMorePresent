@@ -16,10 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.view.backgroundColor=[UIColor whiteColor];
+     self.view.backgroundColor=[UIColor brownColor];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 80, 30)];
+    [btn setTitle:@"push" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(juTouchNext) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+
     // Do any additional setup after loading the view.
 }
-
+-(void)juTouchNext{
+    PushViewController *nextVc=[[PushViewController alloc]init];
+    self.navigationController.delegate=nextVc;
+    [self.navigationController pushViewController:nextVc animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
