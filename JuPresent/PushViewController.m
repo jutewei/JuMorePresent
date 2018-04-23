@@ -8,20 +8,24 @@
 
 #import "PushViewController.h"
 #import "JuNaviTransitioning.h"
-@interface PushViewController ()
+#import "JuInteractiveTransition.h"
 
+@interface PushViewController ()
+@property (nonatomic,strong) JuInteractiveTransition *ju_interavtive;
 @end
 
 @implementation PushViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.view.backgroundColor=[UIColor brownColor];
+    self.title=@"自定义push";
+    self.view.backgroundColor=[UIColor brownColor];
     UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 80, 30)];
     [btn setTitle:@"push" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(juTouchNext) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-
+    _ju_interavtive=[JuInteractiveTransition interactiveTransitionWithTransitionType:JuTransitionTypePop GestureDirection:JuInteractiveTransitionGestureDirectionRight];
+    [_ju_interavtive addPanGestureForViewController:self];
     // Do any additional setup after loading the view.
 }
 -(void)juTouchNext{
@@ -38,7 +42,7 @@
 - (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                                    interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
 
-    return nil;
+    return _ju_interavtive.interation?_ju_interavtive:nil;
 }
 //返回手势过渡管理对象
 - (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
