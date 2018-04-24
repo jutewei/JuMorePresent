@@ -8,29 +8,37 @@
 
 #import "NextViewController.h"
 #import "JuModelTransitioning.h"
+#import "JuTransitionDelegate.h"
+#import "JuInteractiveTransition.h"
 
 @interface NextViewController ()
-@property (nonatomic,strong) JuModelTransitioning *animator;
+@property (nonatomic,strong) JuTransitionDelegate *ju_interavtiveDelegete;
+@property (nonatomic,strong) JuInteractiveTransition *ju_interavtive;
 @end
 
 @implementation NextViewController
 -(instancetype)init{
     self=[super init];
     if(self){
-        self.transitioningDelegate = self;
-        self.modalPresentationStyle = UIModalPresentationCustom;
+//        self.transitioningDelegate = self;
+//        self.modalPresentationStyle = UIModalPresentationCustom;
+ _ju_interavtiveDelegete=[JuTransitionDelegate initTransitionDelegate:JuTransitionTypeDismiss gestureDirection:JuInteractiveTransitionGestureDirectionDown vcItem:self];
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
+//    _ju_interavtive=[JuInteractiveTransition interactiveTransitionWithTransitionType:JuTransitionTypeDismiss GestureDirection:JuInteractiveTransitionGestureDirectionDown];
+//     [_ju_interavtive addPanGestureForViewController:self];
+    //    [_ju_interavtive addPanGestureForViewController:self.navigationController];
+
 //      self.navigationController.delegate = self;
     // Do any additional setup after loading the view.
 }
 //延迟加载
 
-#pragma mark - UIViewControllerTransitioningDelegate
+/*#pragma mark - UIViewControllerTransitioningDelegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     return [JuModelTransitioning juTransitionType:YES];
 }
@@ -39,9 +47,9 @@
 //    self.animator.presented = NO;
     return [JuModelTransitioning juTransitionType:NO];
 }
-- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator{
-    return nil;
-}
+//- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator{
+//    return nil;
+//}
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator{
     return  nil;
@@ -49,9 +57,12 @@
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source{
     return nil;
 }
--(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator{
+    return _ju_interavtive.interation?_ju_interavtive:nil;
+}*/
+//-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

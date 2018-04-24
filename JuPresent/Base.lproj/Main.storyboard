@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="729" y="161"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Ju Navi View Controller-->
         <scene sceneID="bRi-BT-Jfv">
             <objects>
-                <navigationController id="duc-sL-AHF" sceneMemberID="viewController">
+                <navigationController id="duc-sL-AHF" customClass="JuNaviViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yZb-er-FOR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

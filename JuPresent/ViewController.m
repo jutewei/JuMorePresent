@@ -11,8 +11,12 @@
 #import "PushViewController.h"
 #import "SimpleViewController.h"
 #import "PresentationViewController.h"
-@interface ViewController ()
+#import "JuNaviTransitioning.h"
 
+#import "JuTransitionDelegate.h"
+
+@interface ViewController ()
+@property (nonatomic,strong) JuTransitionDelegate *ju_interavtive;
 @end
 
 @implementation ViewController
@@ -21,14 +25,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+-(BOOL)prefersStatusBarHidden{
+    return NO;
+}
 - (IBAction)juTouchNext:(id)sender {
     NextViewController *nextVc=[[NextViewController alloc]init];
     [self presentViewController:nextVc animated:YES completion:nil];
 }
 - (IBAction)juTouchPush:(id)sender {
+
     PushViewController *nextVc=[[PushViewController alloc]init];
-    self.navigationController.delegate=nextVc;
+//    self.navigationController.delegate=nextVc;
+
+    
     [self.navigationController pushViewController:nextVc animated:YES];
 }
 - (IBAction)juTouchSimple:(id)sender {

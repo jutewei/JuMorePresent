@@ -9,9 +9,11 @@
 #import "PushViewController.h"
 #import "JuNaviTransitioning.h"
 #import "JuInteractiveTransition.h"
+#import "JuTransitionDelegate.h"
 
 @interface PushViewController ()
-@property (nonatomic,strong) JuInteractiveTransition *ju_interavtive;
+//@property (nonatomic,strong) JuInteractiveTransition *ju_interavtive;
+@property (nonatomic,strong) JuTransitionDelegate *ju_interavtiveDelegete;
 @end
 
 @implementation PushViewController
@@ -24,13 +26,19 @@
     [btn setTitle:@"push" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(juTouchNext) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
-    _ju_interavtive=[JuInteractiveTransition interactiveTransitionWithTransitionType:JuTransitionTypePop GestureDirection:JuInteractiveTransitionGestureDirectionRight];
-    [_ju_interavtive addPanGestureForViewController:self];
+
+    _ju_interavtiveDelegete=[JuTransitionDelegate initTransitionDelegate:JuTransitionTypePop gestureDirection:JuInteractiveTransitionGestureDirectionRight vcItem:self.navigationController];
+
+//    _ju_interavtive=[JuInteractiveTransition interactiveTransitionWithTransitionType:JuTransitionTypePop GestureDirection:JuInteractiveTransitionGestureDirectionRight];
+//    [_ju_interavtive addPanGestureForViewController:self.navigationController];
     // Do any additional setup after loading the view.
 }
+//-(BOOL)prefersStatusBarHidden{
+//    return YES;
+//}
 -(void)juTouchNext{
     PushViewController *nextVc=[[PushViewController alloc]init];
-    self.navigationController.delegate=nextVc;
+//    self.navigationController.delegate=nextVc;
     [self.navigationController pushViewController:nextVc animated:YES];
 }
 - (void)didReceiveMemoryWarning {
@@ -39,18 +47,18 @@
 }
 
 
-- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
-
-    return _ju_interavtive.interation?_ju_interavtive:nil;
-}
-//返回手势过渡管理对象
-- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                            animationControllerForOperation:(UINavigationControllerOperation)operation
-                                                         fromViewController:(UIViewController *)fromVC
-                                                           toViewController:(UIViewController *)toVC {
-    return [JuNaviTransitioning juTransitionType:operation];
-}
+//- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+//                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
+//
+//    return _ju_interavtive.interation?_ju_interavtive:nil;
+//}
+////返回手势过渡管理对象
+//- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+//                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+//                                                         fromViewController:(UIViewController *)fromVC
+//                                                           toViewController:(UIViewController *)toVC {
+//    return [JuNaviTransitioning juTransitionType:operation];
+//}
 /*
 #pragma mark - Navigation
 
