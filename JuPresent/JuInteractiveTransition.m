@@ -54,6 +54,7 @@
         case JuInteractiveTransitionGestureDirectionRight:{
             CGFloat transitionX = [panGesture translationInView:panGesture.view].x;
             persent = transitionX / panGesture.view.frame.size.width;
+            NSLog(@"宽度 %f ：%f" ,transitionX,persent);
         }
             break;
         case JuInteractiveTransitionGestureDirectionUp:{

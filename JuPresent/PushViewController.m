@@ -20,7 +20,7 @@
     [super viewDidLoad];
     self.title=@"自定义push";
     self.view.backgroundColor=[UIColor brownColor];
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 80, 30)];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(150, 200, 80, 30)];
     [btn setTitle:@"push" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(juTouchNext) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
