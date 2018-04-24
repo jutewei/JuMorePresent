@@ -27,7 +27,7 @@
     [btn addTarget:self action:@selector(juTouchNext) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 
-    _ju_interavtiveDelegete=[JuTransitionDelegate initTransitionDelegate:JuTransitionTypePop gestureDirection:JuInteractiveTransitionGestureDirectionRight vcItem:self.navigationController];
+//    _ju_interavtiveDelegete=[JuTransitionDelegate initTransitionDelegate:JuTransitionTypePop gestureDirection:JuInteractiveTransitionGestureDirectionRight vcItem:self.navigationController];
 
 //    _ju_interavtive=[JuInteractiveTransition interactiveTransitionWithTransitionType:JuTransitionTypePop GestureDirection:JuInteractiveTransitionGestureDirectionRight];
 //    [_ju_interavtive addPanGestureForViewController:self.navigationController];

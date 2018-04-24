@@ -7,15 +7,17 @@
 //
 
 #import "JuNaviViewController.h"
+#import "JuTransitionDelegate.h"
 
 @interface JuNaviViewController ()<UINavigationControllerDelegate>
-
+@property (nonatomic,strong) JuTransitionDelegate *ju_interavtiveDelegete;
 @end
 
 @implementation JuNaviViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     _ju_interavtiveDelegete=[JuTransitionDelegate initTransitionDelegate:JuTransitionTypePop gestureDirection:JuInteractiveTransitionGestureDirectionRight vcItem:self];
     // Do any additional setup after loading the view.
 }
 
